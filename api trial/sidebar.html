@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Sidebar</title>
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+  <div id="sidebar">
+    <h2>Compare Products</h2>
+    <div id="filters">
+      <label class="switch">
+        <input type="checkbox" id="freeDelivery">
+        <span class="slider"></span>
+        <p>Free Delivery</p>
+      </label>
+      <label class="switch">
+        <input type="checkbox" id="fastDelivery">
+        <span class="slider"></span>
+        <p>Fast Delivery</p>
+      </label>
+      <select id="sort">
+        <option value="default">Sort By</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+      </select>
+    </div>
+    <div id="product-list"></div>
+  </div>
+  <script src="sidebar.js"></script>
+</body>
+</html>
