@@ -35,7 +35,7 @@ This project gave us the opportunity to combine web scraping, API development wi
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/dealfinder.git
+git clone https://github.com/tanishananda1107/dealfinder.tj.git
 cd dealfinder
 ```
 
