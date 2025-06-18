@@ -1,6 +1,12 @@
-# 🔍 DealFinder - Smart Shopping Extension
+# 🔍 Smart Dealfinder - Convenient Shopping Extension
 
-**DealFinder** is a browser extension that lets users search for products across top Indian e-commerce platforms like **Amazon**, **Flipkart**, and **Snapdeal**. It scrapes real-time product listings based on user queries, displays them neatly in a sidebar, and offers options to sort by price or rating, all with a dark/light mode toggle.
+**Smart Dealfinder** is a browser extension designed to help users find the best deals based on their personal shopping preferences. Whether you're looking for the lowest price or the highest-rated product, DealFinder fetches and compares data in real-time across major e-commerce platforms like Amazon, Flipkart, and Snapdeal — all within your browser.
+
+What started as a simple idea turned into a hands-on learning journey — from long nights of debugging to countless iterations. We've come a long way in developing the core functionality, and while this version is a working prototype, there's still plenty of room for improvement and exciting features ahead.
+
+This project gave us the opportunity to combine web scraping, API development with FastAPI, browser automation using Playwright, and building a Chrome extension from the ground up. DealFinder is still evolving — and we’re just getting started.
+
+
 
 ---
 
@@ -17,24 +23,10 @@
 
 ## 🛠️ Dependencies
 
-Install the following Python packages (in a virtual environment is recommended):
-
-```bash
-pip install -r requirements.txt
-```
-
-**Requirements:**
-
 - Python 3.8+
 - FastAPI
 - Uvicorn
 - Playwright
-
-Also install browser dependencies for Playwright:
-
-```bash
-playwright install
-```
 
 ---
 
@@ -52,7 +44,9 @@ cd dealfinder
 ### 2. Start the FastAPI Server
 
 ```bash
-cd Backend
+cd Background
+pip install -r requirements.txt
+playwright install
 python server.py
 ```
 
@@ -65,9 +59,9 @@ python server.py
 1. Go to `chrome://extensions/` in your Chrome browser.
 2. Enable **Developer Mode** (top-right toggle).
 3. Click **"Load unpacked"**.
-4. Select the project folder named `Ext`.
+4. Select the project folder named `Front`.
 
-Once loaded, click the extension icon in the toolbar to open the DealFinder sidebar.
+Once loaded, click the extension icon in the toolbar to open the Smart Dealfinder sidebar.
 
 ---
 
