@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>India Deal Finder</title>
-  <style>
-    body {
-      width: 300px;
-      padding: 12px;
-      font-family: Arial, sans-serif;
-    }
-    #deals {
-      margin-top: 10px;
-    }
-    .loading {
-      padding: 10px;
-      text-align: center;
-      color: #666;
-    }
-    .error {
-      padding: 10px;
-      text-align: center;
-      color: #d32f2f;
-    }
-    .store {
-      margin: 8px 0;
-      padding: 8px 0;
-      border-bottom: 1px solid #eee;
-    }
-    .store a {
-      color: #1a73e8;
-      text-decoration: none;
-      display: block;
-      padding: 4px 0;
-    }
-    .store a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8">
+
+  <title>Amazon Product Search</title>
+  <link rel="stylesheet" href="side.css">
 </head>
 <body>
-  <h3 style="margin-top: 0;">India Deal Finder</h3>
-  <div id="deals" class="loading">Loading stores...</div>
+  <div class="sidebar-container">
+    <div class="sidebar-header">
+      <h3>Smart Dealfinder</h3>
+      <button id="closeBtn" class="close-btn">X</button>
+    </div>
+    
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="Search for products..." class="search-input">
+      <button id="scrapeBtn" class="search-btn">
+         Search
+      </button>
+      
+      <div class="filters">
+        <!-- <label class="filter-option">
+          <input type="checkbox" id="freeDelivery">
+          <span>Free Delivery</span>
+        </label> -->
+        <label class="filter-option">
+          <span>Sort by Price:</span>
+          <select id="sortPriceSelect">
+            <option value="">None</option>
+            <option value="asc">Low to High</option>
+            <option value="desc">High to Low</option>
+          </select>
+        </label>
+
+        <label class="filter-option">
+          <input type="checkbox" id="sortRating">
+          <span>Sort by Rating</span>
+        </label>
+        <label class="filter-option switch">
+          <span>Dark Mode:</span>
+          <input type="checkbox" id="themeToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    
+    <div id="results" class="results-container"></div>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>

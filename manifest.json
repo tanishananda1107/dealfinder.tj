@@ -1,26 +1,30 @@
 {
-    "manifest_version": 3,
-    "name": "India Deal Finder",
-    "version": "1.0",
-    "description": "Show direct links to Indian e-commerce stores",
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "content_scripts": [
-      {
-        "matches": ["*://*.google.com/search*"],
-        "js": ["content.js"]
-      }
-    ],
-    "host_permissions": [
-      "*://*.amazon.in/*",
-      "*://*.flipkart.com/*",
-      "*://*.snapdeal.com/*",
-      "*://*.meesho.com/*",
-      "https://api.priceapi.com/*"
-    ],
-    "permissions": [
-      "storage"
-    ],
-    "options_page": "options.html"
-  }
+  "manifest_version": 3,
+  "name": "Dealfinder fast api test",
+  "version": "1.5.1",
+  "description": "Search Amazon products from any webpage",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://www.amazon.in/*",
+    "http://localhost:5000/",
+    "http://127.0.0.1:5000/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Amazon Search",
+    "default_icon": "icon48.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "side.css", "popup.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
